@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+}
+
+// Colors pallete
+@import 'scss/colors';
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: $blue;
+}
+
+img,
+svg {
+    display: block;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+}
+
+.border {
+    border: 1px solid $red;
+}
+
+p {
+    font-size: 1rem;
+    color: $gray-3;
+    letter-spacing: 1px;
+    line-height: 140%;
+}
+
+// Responsive media queries
+@import 'scss/layout';
+@import 'scss/menu';

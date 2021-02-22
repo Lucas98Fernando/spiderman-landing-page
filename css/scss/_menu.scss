@@ -1,0 +1,89 @@
+// Navigation
+
+header {
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-width: 88px;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+
+    li {
+        margin-left: 1.2rem;
+
+        .nav-link {
+            display: inline-block;
+            position: relative;
+            padding: 8px 16px;
+            font-size: 0.8rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: $gray-3;
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: -50px;
+                left: 50%;
+                width: 2px;
+                height: 0px;
+                border-radius: 50px;
+                background: linear-gradient(180deg, rgba(233, 29, 34, 0) 0%, #e91d22 100%);
+                transition: .7s ease-in-out;
+            }
+
+            &:hover {
+                color: $white-light;
+                transition: .5s ease-in-out;
+
+                &::after {
+                    height: 45px;
+                }
+            }
+        }
+    }
+}
+
+.nav-social {
+    display: flex;
+
+    svg {
+        margin-left: 1rem;
+        cursor: pointer;
+        width: 1.8rem;
+
+        path,
+        circle {
+            transition: .5s ease-in-out;
+        }
+
+        &:hover {
+
+            path,
+            circle {
+                fill: $red-light;
+                transform: translate3d(0, -4px, 0);
+            }
+        }
+    }
+}
