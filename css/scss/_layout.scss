@@ -18,7 +18,6 @@
     max-width: $container-xl;
     margin: 0 auto;
     padding: 2rem 1rem;
-    overflow: hidden;
     height: 100vh;
 
     @include responsive(sm) {
@@ -143,6 +142,10 @@
 }
 
 .cta-group {
+    a {
+        font-size: 0.9rem;
+    }
+
     @include responsive(sm) {
         display: flex;
     }
@@ -154,14 +157,14 @@
         transform: translate3d(-170px, 0, 0);
         z-index: 99;
 
-        @include responsive(lg) {
+        @include responsive(xl) {
             width: 130%;
-            transform: translate3d(-180px, 10px, 0);
+            transform: translate3d(-195px, -20px, 0);
         }
 
-        @include responsive(xl) {
-            width: 140%;
-            transform: translate3d(-190px, -20px, 0);
+        @include responsive(lg) {
+            width: 125%;
+            transform: translate3d(-180px, 10px, 0);
         }
 
         @include responsive(sm) {
@@ -182,6 +185,10 @@
     overflow: hidden;
     top: 0;
     left: 0;
+
+    @include responsive(sm) {
+        height: 100%;
+    }
 
     &::after {
         content: "";

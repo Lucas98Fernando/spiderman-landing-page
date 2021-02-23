@@ -67,7 +67,6 @@ p {
   max-width: 1440px;
   margin: 0 auto;
   padding: 2rem 1rem;
-  overflow: hidden;
   height: 100vh;
 }
 
@@ -231,6 +230,10 @@ p {
   width: 101%;
 }
 
+.cta-group a {
+  font-size: 0.9rem;
+}
+
 @media screen and (max-width: 960px) {
   .cta-group {
     display: -webkit-box;
@@ -246,19 +249,19 @@ p {
   z-index: 99;
 }
 
-@media screen and (max-width: 1440px) and (min-width: 1140px) {
+@media screen and (min-width: 1440px) {
   .container-image .spiderman {
     width: 130%;
-    -webkit-transform: translate3d(-180px, 10px, 0);
-            transform: translate3d(-180px, 10px, 0);
+    -webkit-transform: translate3d(-195px, -20px, 0);
+            transform: translate3d(-195px, -20px, 0);
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (max-width: 1440px) and (min-width: 1140px) {
   .container-image .spiderman {
-    width: 140%;
-    -webkit-transform: translate3d(-190px, -20px, 0);
-            transform: translate3d(-190px, -20px, 0);
+    width: 125%;
+    -webkit-transform: translate3d(-180px, 10px, 0);
+            transform: translate3d(-180px, 10px, 0);
   }
 }
 
@@ -287,6 +290,12 @@ p {
   overflow: hidden;
   top: 0;
   left: 0;
+}
+
+@media screen and (max-width: 960px) {
+  .bg-video {
+    height: 100%;
+  }
 }
 
 .bg-video::after {
