@@ -174,6 +174,56 @@
     }
 }
 
+#history {
+    .container-image {
+        .miles-morales {
+            border-radius: 5%;
+            // box-shadow: -4px 4px 25px $red-light;
+        }
+    }
+
+    .container-content {
+        padding: 0 1rem;
+
+        @include responsive(sm) {
+            padding: 0;
+        }
+    }
+}
+
+h2 {
+    color: $red;
+    font-size: 4rem;
+    font-family: "Spider Font", sans-serif;
+    font-weight: 100;
+
+    @include responsive(sm) {
+        font-size: 2rem;
+    }
+}
+
+#wallpapers {
+    flex-direction: column;
+    height: auto;
+
+    .grid-wallpapers {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+
+        @include responsive(sm) {
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 1rem;
+        }
+
+        .image {
+            img {
+                border-radius: 20px;
+            }
+        }
+    }
+}
+
 .bg-video {
     position: absolute;
     display: flex;
