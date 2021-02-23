@@ -329,6 +329,24 @@ header {
   padding: 0 1rem;
 }
 
+@media screen and (min-width: 1440px) {
+  .navbar .menu-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1140px) {
+  .navbar .menu-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1140px) and (min-width: 540px) {
+  .navbar .menu-mobile {
+    display: none;
+  }
+}
+
 .nav-menu {
   display: -webkit-box;
   display: -ms-flexbox;

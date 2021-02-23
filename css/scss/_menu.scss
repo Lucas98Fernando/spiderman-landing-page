@@ -11,6 +11,20 @@ header {
     max-width: $container-xl;
     margin: 0 auto;
     padding: 0 1rem;
+
+    .menu-mobile {
+        @include responsive (xl) {
+            display: none;
+        }
+
+        @include responsive (lg) {
+            display: none;
+        }
+
+        @include responsive (md) {
+            display: none;
+        }
+    }
 }
 
 .nav-menu {
