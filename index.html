@@ -37,17 +37,29 @@
                 <img src="svg/icon-youtube.svg" alt="YouTube icon" onload="SVGInject(this)">
                 <img src="svg/icon-twitter.svg" alt="Twitter icon" onload="SVGInject(this)">
             </div>
+            <input id="hamburger-menu" type="checkbox" style="display: none;">
+            <label for="hamburger-menu">
+                <div class="hamburger-menu"></div>
+            </label>
         </nav>
     </header>
     <!--===== END HEADER =====-->
 
+    <!--===== BG VIDEO =====-->
+    <section class="bg-video">
+        <video class="video" autoplay muted loop>
+            <source src="/video/spiderman2.mp4" type="video/mp4">
+        </video>
+    </section>
+    <!--===== END BG VIDEO =====-->
+
     <!--===== HERO =====-->
     <section id="hero" class="container">
         <div class="container-content">
-            <div>
+            <div class="px-1">
                 <img src="images/spiderman-text.png" alt="Spider Man - Miles Morales">
             </div>
-            <div>
+            <div class="my-2">
                 <p>Na aventura mais recente do universo de Marvel's Spider-Man, o adolescente Miles Morales está se
                     adaptando à sua nova casa enquanto segue os passos de seu mentor, Peter Parker, para se tornar um
                     novo
@@ -56,13 +68,13 @@
                     perceber que com grandes poderes também vêm grandes responsabilidades. Para salvar a Nova York da
                     Marvel, Miles precisa reconhecer e assumir o título de Spider-Man.</p>
             </div>
-            <div>
-                <a href="#" class="cta-buy">Pré-venda agora</a>
+            <div class="mb-2 cta-group">
+                <a href="#" class="cta-buy mr-2">Pré-venda agora</a>
                 <a href="#" class="cta-trailer">Assista ao trailer</a>
             </div>
-            <div>
-                <img src="svg/marvel.svg" alt="Marvel" onload="SVGInject(this)">
-                <img src="svg/ps.svg" alt="PlayStation" onload="SVGInject(this)">
+            <div class="flex align-itens-center mt-1">
+                <img src="svg/marvel.svg" alt="Marvel" onload="SVGInject(this)" class="w-auto mr-2">
+                <img src="svg/ps.svg" alt="PlayStation" onload="SVGInject(this)" class="w-auto">
             </div>
         </div>
         <div class="container-image">
@@ -70,7 +82,6 @@
         </div>
     </section>
     <!--===== END HERO =====-->
-
 
 </body>
 

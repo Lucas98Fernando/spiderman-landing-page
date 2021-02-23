@@ -8,7 +8,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1440px;
+    max-width: $container-xl;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -25,6 +25,10 @@ header {
 .nav-list {
     display: flex;
     list-style: none;
+
+    @include responsive(sm) {
+        display: none;
+    }
 
     li {
         margin-left: 1.2rem;
@@ -67,6 +71,10 @@ header {
 .nav-social {
     display: flex;
 
+    @include responsive(sm) {
+        display: none;
+    }
+
     svg {
         margin-left: 1rem;
         cursor: pointer;
@@ -86,4 +94,57 @@ header {
             }
         }
     }
+}
+
+.hamburger-menu {
+    @include responsive(sm) {
+        display: block;
+    }
+
+    display: none;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border-radius: 10px;
+    transition: 0.7s ease-in-out;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 35%;
+        width: 50%;
+        height: 10%;
+        border-radius: 10px;
+        background-color: $red;
+        transition: .7s ease-in-out;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 30%;
+        left: 15%;
+        width: 70%;
+        height: 10%;
+        border-radius: 10px;
+        background-color: $red;
+        transition: .7s ease-in-out;
+    }
+}
+
+#hamburger-menu:checked~label .hamburger-menu::after {
+    width: 70%;
+    height: 10%;
+    transform: rotate(225deg);
+    top: 40%;
+    left: 15%;
+}
+
+#hamburger-menu:checked~label .hamburger-menu::before {
+    width: 70%;
+    height: 10%;
+    transform: rotate(-225deg);
+    top: 40%;
+    left: 15%;
 }

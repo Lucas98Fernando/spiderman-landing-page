@@ -1,11 +1,30 @@
+.flex {
+    display: flex;
+}
+
+.align-itens-center {
+    align-items: center;
+}
+
+.w-auto {
+    width: auto;
+}
+
 .container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    max-width: 1440px;
+    position: relative;
+    max-width: $container-xl;
     margin: 0 auto;
     padding: 2rem 1rem;
-    overflow-x: hidden;
+    overflow: hidden;
+    height: 100vh;
+
+    @include responsive(sm) {
+        flex-direction: column;
+        height: auto;
+    }
 }
 
 .container-content {
@@ -13,6 +32,11 @@
     flex-direction: column;
     justify-content: flex-start;
     max-width: 576px;
+
+    @include responsive(sm) {
+        max-width: 960px;
+        order: 2;
+    }
 
     .cta-buy {
         display: inline-block;
@@ -24,6 +48,14 @@
         color: $white;
         text-transform: uppercase;
         transition: 0.5s ease-in-out;
+
+
+        @include responsive(sm) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 0.7rem;
+        }
 
         &::after {
             content: "";
@@ -80,6 +112,13 @@
         text-transform: uppercase;
         transition: 0.5s ease-in-out;
 
+        @include responsive(sm) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 0.7rem;
+        }
+
         &::after {
             content: "";
             display: block;
@@ -94,6 +133,7 @@
         }
 
         &:hover {
+            transform: skewX(-10deg) scale(1.05);
 
             &::after {
                 width: 101%;
@@ -102,9 +142,67 @@
     }
 }
 
+.cta-group {
+    @include responsive(sm) {
+        display: flex;
+    }
+}
+
 .container-image {
     .spiderman {
-        width: 150%;
+        width: 130%;
         transform: translate3d(-170px, 0, 0);
+        z-index: 99;
+
+        @include responsive(lg) {
+            width: 130%;
+            transform: translate3d(-180px, 10px, 0);
+        }
+
+        @include responsive(xl) {
+            width: 140%;
+            transform: translate3d(-190px, -20px, 0);
+        }
+
+        @include responsive(sm) {
+            width: 100%;
+            transform: translate3d(0, -20px, 0);
+        }
+    }
+}
+
+.bg-video {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120%;
+    z-index: -1;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(110deg,
+                $blue-dark 25%,
+                rgba(11, 12, 16, 0.80) 50%,
+                $blue-dark 70%);
+    }
+
+    .video {
+        height: 100%;
+
+
+        @include responsive(sm) {
+            display: none;
+        }
     }
 }
