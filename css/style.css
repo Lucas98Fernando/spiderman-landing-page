@@ -277,6 +277,10 @@ p {
   }
 }
 
+#history {
+  overflow: hidden;
+}
+
 #history .container-image .miles-morales {
   border-radius: 5%;
 }
@@ -305,6 +309,8 @@ h2 {
 }
 
 #wallpapers {
+  background: #14181f;
+  padding: 3rem 1rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -379,6 +385,26 @@ h2 {
   }
 }
 
+.bg-loader {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: linear-gradient(225deg, #ea1d22 0%, #b31317 100%);
+  overflow: hidden;
+}
+
 header {
   width: 100%;
 }
@@ -446,15 +472,27 @@ header {
   margin-left: 1.2rem;
 }
 
+@media screen and (max-width: 960px) {
+  .nav-list li {
+    margin: 0;
+  }
+}
+
 .nav-list li .nav-link {
   display: inline-block;
   position: relative;
   padding: 8px 16px;
   font-size: 0.8rem;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #959698;
+}
+
+@media screen and (max-width: 960px) {
+  .nav-list li .nav-link {
+    font-size: 1rem;
+  }
 }
 
 .nav-list li .nav-link::after {
@@ -480,6 +518,22 @@ header {
 
 .nav-list li .nav-link:hover::after {
   height: 45px;
+}
+
+.nav-list li .nav-link.be-yourself {
+  color: #ea1d22;
+}
+
+.nav-list .nav-social-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .nav-list .nav-social-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .nav-social {
@@ -513,6 +567,16 @@ header {
           transform: translate3d(0, -4px, 0);
 }
 
+@media screen and (max-width: 960px) {
+  .nav-social-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    bottom: 10%;
+  }
+}
+
 .hamburger-menu {
   display: none;
   width: 40px;
@@ -526,6 +590,8 @@ header {
 @media screen and (max-width: 960px) {
   .hamburger-menu {
     display: block;
+    position: relative;
+    z-index: 999;
   }
 }
 
@@ -571,6 +637,30 @@ header {
           transform: rotate(-225deg);
   top: 40%;
   left: 15%;
+}
+
+.nav-list.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #272a31;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
 }
 
 .m-1 {
@@ -896,5 +986,47 @@ header {
 @font-face {
   font-family: "Spider Font";
   src: url("/fonts/spiderfont.ttf") format("woff2"), url("/fonts/spiderfont.ttf") format("woff");
+}
+
+.logo-spiderman {
+  fill: transparent;
+  -webkit-animation: logo-spiderman 10s ease-in-out infinite alternate;
+          animation: logo-spiderman 10s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes logo-spiderman {
+  0% {
+    stroke-width: 0;
+    stroke-dasharray: 1 100;
+    fill: transparent;
+  }
+  25% {
+    stroke-width: 1;
+    stroke-dasharray: 100 1;
+    fill: transparent;
+  }
+  60%,
+  100% {
+    stroke-width: 0.3;
+    fill: #e5e9ef;
+  }
+}
+
+@keyframes logo-spiderman {
+  0% {
+    stroke-width: 0;
+    stroke-dasharray: 1 100;
+    fill: transparent;
+  }
+  25% {
+    stroke-width: 1;
+    stroke-dasharray: 100 1;
+    fill: transparent;
+  }
+  60%,
+  100% {
+    stroke-width: 0.3;
+    fill: #e5e9ef;
+  }
 }
 /*# sourceMappingURL=style.css.map */

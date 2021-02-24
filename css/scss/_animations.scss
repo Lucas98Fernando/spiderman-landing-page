@@ -1,0 +1,25 @@
+// Animation logo spider
+.logo-spiderman {
+    fill: transparent;
+    animation: logo-spiderman 10s ease-in-out infinite alternate;
+}
+
+@keyframes logo-spiderman {
+    0% {
+        stroke-width: 0;
+        stroke-dasharray: 1 100;
+        fill: transparent;
+    }
+
+    25% {
+        stroke-width: 1;
+        stroke-dasharray: 100 1;
+        fill: transparent;
+    }
+
+    60%,
+    100% {
+        stroke-width: 0.3;
+        fill: $white-dark;
+    }
+}
