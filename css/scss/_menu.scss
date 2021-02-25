@@ -34,6 +34,19 @@ header {
 
 .logo {
     max-width: 88px;
+    cursor: pointer;
+
+    path {
+        transition: .7s ease-in-out;
+    }
+
+    &:hover {
+
+        path {
+            fill: $red-light;
+            transform: translate3d(0, -4px, 0);
+        }
+    }
 }
 
 .nav-list {

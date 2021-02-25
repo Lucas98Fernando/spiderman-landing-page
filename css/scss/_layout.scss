@@ -176,6 +176,7 @@
 
 #history {
     overflow: hidden;
+    background: linear-gradient(225deg, $blue 0%, $blue-dark 100%);;
 
     .container-image {
         .miles-morales {
@@ -281,4 +282,30 @@ h2 {
     align-items: center;
     background: linear-gradient(225deg, $red 0%, $red-dark 100%);
     overflow: hidden;
+}
+
+#footer {
+    height: auto;
+    background: linear-gradient(225deg, $red 0%, $red-dark 100%);
+
+    .footer-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        .logo-footer {
+            svg {
+                @include responsive (sm) {
+                    margin-right: 1rem;
+                }
+            }
+        }
+
+        .copyright {
+            p {
+                color: $white;
+            }
+        }
+    }
 }

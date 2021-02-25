@@ -279,6 +279,7 @@ p {
 
 #history {
   overflow: hidden;
+  background: linear-gradient(225deg, #14181f 0%, #0a0c10 100%);
 }
 
 #history .container-image .miles-morales {
@@ -405,6 +406,34 @@ h2 {
   overflow: hidden;
 }
 
+#footer {
+  height: auto;
+  background: linear-gradient(225deg, #ea1d22 0%, #b31317 100%);
+}
+
+#footer .footer-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 960px) {
+  #footer .footer-wrap .logo-footer svg {
+    margin-right: 1rem;
+  }
+}
+
+#footer .footer-wrap .copyright p {
+  color: #edf1f7;
+}
+
 header {
   width: 100%;
 }
@@ -453,6 +482,18 @@ header {
 
 .logo {
   max-width: 88px;
+  cursor: pointer;
+}
+
+.logo path {
+  -webkit-transition: .7s ease-in-out;
+  transition: .7s ease-in-out;
+}
+
+.logo:hover path {
+  fill: #f02a2f;
+  -webkit-transform: translate3d(0, -4px, 0);
+          transform: translate3d(0, -4px, 0);
 }
 
 .nav-list {
