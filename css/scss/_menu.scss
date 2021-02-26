@@ -110,6 +110,9 @@ header {
 
         @include responsive(sm) {
             display: flex;
+            width: 50%;
+            position: absolute;
+            bottom: 10%;
         }
     }
 }

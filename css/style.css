@@ -597,6 +597,9 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 50%;
+    position: absolute;
+    bottom: 10%;
   }
 }
 
