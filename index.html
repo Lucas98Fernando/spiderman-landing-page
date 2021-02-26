@@ -97,7 +97,8 @@
             </div>
             <div class="mb-2 cta-group animation-hero-3">
                 <a href="#" class="cta-buy mr-2">Comprar agora</a>
-                <a href="#" class="cta-trailer">Assista ao trailer</a>
+                <a href="#" class="cta-trailer" onclick="lightbox_open();">Assista ao
+                    trailer</a>
             </div>
             <div class="flex align-itens-center mt-1 animation-hero-4">
                 <img src="svg/marvel.svg" alt="Marvel" onload="SVGInject(this)" class="w-auto mr-2">
@@ -109,6 +110,16 @@
         </div>
     </section>
     <!--===== END HERO =====-->
+
+    <div id="light">
+        <a class="boxclose" id="boxclose" onclick="lightbox_close();"></a>
+        <video id="VisaChipCardVideo" width="590" controls>
+            <source src="/video/spiderman2-compress.mp4" type="video/mp4">
+            <!--Browser does not support <video> tag -->
+        </video>
+    </div>
+
+    <div id="fade" onClick="lightbox_close();"></div>
 
     <!--===== HISTORY =====-->
     <section id="history">
@@ -227,6 +238,8 @@
 
     <!-- Lightbox JS-->
     <script src="/js/lightbox/dist/js/lightbox.js"></script>
+
+    <script src="/js/video.js"></script>
 
     <!-- AOS Animate JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

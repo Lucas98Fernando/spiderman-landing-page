@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -1092,5 +1093,76 @@ header {
     stroke-width: 0.3;
     fill: #e5e9ef;
   }
+}
+
+#fade {
+  display: none;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  -moz-opacity: 0.8;
+  opacity: .80;
+  filter: alpha(opacity=80);
+}
+
+#light {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 600px;
+  max-height: 360px;
+  margin-left: -300px;
+  margin-top: -180px;
+  z-index: 1002;
+  overflow: visible;
+}
+
+@media screen and (max-width: 960px) {
+  #light {
+    max-width: 350px;
+    margin-left: -160px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  #light video {
+    width: 320px;
+  }
+}
+
+#boxclose {
+  float: right;
+  cursor: pointer;
+  color: #fff;
+  border: 1px solid #AEAEAE;
+  border-radius: 3px;
+  background: #222222;
+  font-size: 31px;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 0px;
+  padding: 11px 3px;
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  z-index: 1002;
+  opacity: 0.9;
+}
+
+.boxclose:before {
+  content: "×";
+}
+
+#fade:hover ~ #boxclose {
+  display: none;
+}
+
+.test:hover ~ .test2 {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
