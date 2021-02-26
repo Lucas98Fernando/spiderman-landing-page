@@ -70,7 +70,7 @@ p {
   position: relative;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 2rem 1.5rem;
   height: 100vh;
 }
 
@@ -282,41 +282,48 @@ p {
   background: linear-gradient(225deg, #14181f 0%, #0a0c10 100%);
 }
 
-#history .container-image .miles-morales {
+#history .container {
+  height: 100%;
+}
+
+#history .container .container-image .miles-morales {
   border-radius: 5%;
 }
 
-#history .container-content {
+#history .container .container-content {
   padding: 0 1rem;
 }
 
 @media screen and (max-width: 960px) {
-  #history .container-content {
+  #history .container .container-content {
     padding: 0;
   }
 }
 
 h2 {
   color: #ea1d22;
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: "Spider Font", sans-serif;
   font-weight: 100;
 }
 
 @media screen and (max-width: 960px) {
   h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
 #wallpapers {
   background: #14181f;
-  padding: 3rem 1rem;
+}
+
+#wallpapers .container {
+  padding: 3rem 1.5rem;
+  height: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: auto;
 }
 
 #wallpapers .grid-wallpapers {
@@ -338,6 +345,19 @@ h2 {
 
 #wallpapers .grid-wallpapers .image img {
   border-radius: 20px;
+}
+
+#be-yourself .container {
+  height: 100%;
+  overflow: hidden;
+}
+
+#be-yourself .container .container-content {
+  width: 100%;
+}
+
+#be-yourself .container .container-image .be-yourself {
+  border-radius: 5%;
 }
 
 .bg-video {
@@ -407,8 +427,11 @@ h2 {
 }
 
 #footer {
-  height: auto;
   background: linear-gradient(225deg, #ea1d22 0%, #b31317 100%);
+}
+
+#footer .container {
+  height: auto;
 }
 
 #footer .footer-wrap {
@@ -453,6 +476,10 @@ header {
   padding: 0 1rem;
 }
 
+.navbar .menu-mobile {
+  z-index: 999;
+}
+
 @media screen and (min-width: 1440px) {
   .navbar .menu-mobile {
     display: none;
@@ -460,12 +487,6 @@ header {
 }
 
 @media screen and (max-width: 1440px) and (min-width: 1140px) {
-  .navbar .menu-mobile {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 1140px) and (min-width: 540px) {
   .navbar .menu-mobile {
     display: none;
   }
@@ -501,6 +522,7 @@ header {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
+  z-index: 99;
 }
 
 @media screen and (max-width: 960px) {
@@ -608,7 +630,7 @@ header {
           transform: translate3d(0, -4px, 0);
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1140px) and (min-width: 540px) {
   .nav-social-mobile {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -619,6 +641,7 @@ header {
 }
 
 .hamburger-menu {
+  cursor: pointer;
   display: none;
   width: 40px;
   height: 40px;

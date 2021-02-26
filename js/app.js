@@ -46,6 +46,15 @@ document.addEventListener('DOMContentLoaded', () => {
             ease: Expo.easeInOut
         }, '-=0.5')
 
+        .fromTo('.menu-mobile', 0.7, {
+            y: -50,
+            opacity: 0
+        }, {
+            y: 0,
+            opacity: 1,
+            ease: Expo.easeInOut
+        }, '-=0.5')
+
         .fromTo('.animation-hero-1', 0.7, {
             y: -50,
             opacity: 0

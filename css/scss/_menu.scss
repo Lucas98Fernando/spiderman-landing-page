@@ -13,15 +13,13 @@ header {
     padding: 0 1rem;
 
     .menu-mobile {
+        z-index: 999;
+
         @include responsive (xl) {
             display: none;
         }
 
         @include responsive (lg) {
-            display: none;
-        }
-
-        @include responsive (md) {
             display: none;
         }
     }
@@ -52,6 +50,7 @@ header {
 .nav-list {
     display: flex;
     list-style: none;
+    z-index: 99;
 
     @include responsive(sm) {
         display: none;
@@ -144,7 +143,7 @@ header {
 }
 
 .nav-social-mobile {
-    @include responsive (sm) {
+    @include responsive (md) {
         display: flex;
         position: absolute;
         bottom: 10%;
@@ -152,6 +151,8 @@ header {
 }
 
 .hamburger-menu {
+    cursor: pointer;
+
     @include responsive(sm) {
         display: block;
         position: relative;

@@ -17,7 +17,7 @@
     position: relative;
     max-width: $container-xl;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 2rem 1.5rem;
     height: 100vh;
 
     @include responsive(sm) {
@@ -176,41 +176,47 @@
 
 #history {
     overflow: hidden;
-    background: linear-gradient(225deg, $blue 0%, $blue-dark 100%);;
+    background: linear-gradient(225deg, $blue 0%, $blue-dark 100%);
 
-    .container-image {
-        .miles-morales {
-            border-radius: 5%;
-            // box-shadow: -4px 4px 25px $red-light;
+    .container {
+        height: 100%;
+
+        .container-image {
+            .miles-morales {
+                border-radius: 5%;
+                // box-shadow: -4px 4px 25px $red-light;
+            }
         }
-    }
 
-    .container-content {
-        padding: 0 1rem;
+        .container-content {
+            padding: 0 1rem;
 
-        @include responsive(sm) {
-            padding: 0;
+            @include responsive(sm) {
+                padding: 0;
+            }
         }
     }
 }
 
 h2 {
     color: $red;
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: "Spider Font", sans-serif;
     font-weight: 100;
 
     @include responsive(sm) {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 }
 
 #wallpapers {
     background: $blue;
-    padding: 3rem 1rem;
 
-    flex-direction: column;
-    height: auto;
+    .container {
+        padding: 3rem 1.5rem;
+        height: 100%;
+        flex-direction: column;
+    }
 
     .grid-wallpapers {
         display: grid;
@@ -225,6 +231,23 @@ h2 {
         .image {
             img {
                 border-radius: 20px;
+            }
+        }
+    }
+}
+
+#be-yourself {
+    .container {
+        height: 100%;
+        overflow: hidden;
+
+        .container-content {
+            width: 100%;
+        }
+
+        .container-image {
+            .be-yourself {
+                border-radius: 5%;
             }
         }
     }
@@ -285,8 +308,11 @@ h2 {
 }
 
 #footer {
-    height: auto;
     background: linear-gradient(225deg, $red 0%, $red-dark 100%);
+
+    .container {
+        height: auto;
+    }
 
     .footer-wrap {
         display: flex;
